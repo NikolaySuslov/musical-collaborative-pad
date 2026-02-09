@@ -113,6 +113,7 @@ export class StrudelMirror {
       renkon,
       ...replOptions
     } = options;
+    this.now = 0;
     this.renkon = renkon;
     this.code = initialCode;
     this.root = root;
@@ -134,6 +135,7 @@ export class StrudelMirror {
     autodraw && this.drawFirstFrame();
     this.repl = window.StrudelLib.core.repl({
       ...replOptions,
+      //getTime: () => this.getTimeNow(),
       id,
       onToggle: (started) => {
         replOptions?.onToggle?.(started);
@@ -267,6 +269,17 @@ export class StrudelMirror {
     };
     document.addEventListener('repl-toggle-comment', this.onToggleComment);
   }
+
+  setTimeNow(time){
+    this.now = time;
+    //console.log("Time: ",this.now);
+  }
+
+  getTimeNow(){
+    //let t = (Math.max(this.now, window.StrudelLib.webaudio.getAudioContext().currentTime));
+    return this.now;
+  }
+  
   draw(haps, time, painters) {
     painters?.forEach((painter) => painter(this.drawContext, time, haps, this.drawTime));
   }

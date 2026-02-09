@@ -17,7 +17,9 @@ https://pad.krestianstvo.org/?q=myPad
 - Play & Stop buttons are shared too
 - Saving & Restoring of Strudel REPLs in pads is working
 
-> **Warning**: REPL scheduler syncing across browsers is not ready yet.
+> **Warning!**: REPL scheduler syncing across browsers is not ready yet.  
+The new connected peers should use the buton ```Sync``` in REPL window for now, which will get the Strudel REPL to sync with others along Croquet "virtual" time.  
+
 
 <img style="border: 6px solid #eee" src="./doc/musical-pad/video1.gif"></img>
 
