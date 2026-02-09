@@ -1,8 +1,8 @@
 {"padTitle":"Renkon-Musical-Pad",
 "positions":{"map":{"__map":true,
-"values":[["0",{"height":5653.990801448327,
+"values":[["0",{"height":5690.728047846887,
 "id":"0",
-"width":822.7672910068802,
+"width":813.1713678029998,
 "x":-2056.6875407359244,
 "y":152.3923214222506}],["2",{"height":1384.7453325372853,
 "id":"2",
@@ -20,9 +20,9 @@
 "id":"10",
 "width":725.6091976294842,
 "x":-7498.713611331092,
-"y":-522.4613157787267}],["14",{"height":3460.439896475563,
+"y":-522.4613157787267}],["14",{"height":3537.066442582186,
 "id":"14",
-"width":699.9270318976526,
+"width":795.0162906791697,
 "x":-5647.396933247247,
 "y":165.6194837569174}],["16",{"height":2915.9198423892362,
 "id":"16",
@@ -128,19 +128,23 @@
 "id":"105",
 "width":800,
 "x":8284.815013324254,
-"y":163.09341064898467}],["109",{"height":2503.8769952722228,
+"y":163.09341064898467}],["109",{"height":2540.6525995202696,
 "id":"109",
-"width":925.9871916582313,
-"x":11973.091388656992,
-"y":163.56577001224701}],["110",{"height":457.53403555435773,
+"width":929.3536467363563,
+"x":11907.795077604695,
+"y":168.96121446345254}],["110",{"height":1224.8801377116517,
 "id":"110",
-"width":735.8542386563414,
-"x":12963.431967429005,
-"y":165.80997618540238}],["121",{"height":400,
+"width":818.4594102592816,
+"x":12870.299208840752,
+"y":164.619313510571}],["121",{"height":400,
 "id":"121",
 "width":800,
 "x":11064.390293610266,
-"y":165.01039156533295}]]}},
+"y":165.01039156533295}],["139",{"height":2348.705985469691,
+"id":"139",
+"width":754.7594904611268,
+"x":13725.334618311646,
+"y":165.44366348399268}]]}},
 "titles":{"map":{"__map":true,
 "values":[["0",{"id":"0",
 "state":false,
@@ -212,7 +216,9 @@
 "state":false,
 "title":"Strudel Toolbar"}],["121",{"id":"121",
 "state":false,
-"title":"untitled"}]]}},
+"title":"untitled"}],["139",{"id":"139",
+"state":false,
+"title":"Strudel REPL Sync"}]]}},
 "version":3,
 "windowEnabled":{"map":{"__map":true,
 "values":[["0",{"enabled":true,
@@ -250,12 +256,13 @@
 "id":"105"}],["109",{"enabled":true,
 "id":"109"}],["110",{"enabled":true,
 "id":"110"}],["121",{"enabled":true,
-"id":"121"}]]}},
+"id":"121"}],["139",{"enabled":true,
+"id":"139"}]]}},
 "windowTypes":{"map":{"__map":true,
-"values":[["0","code"],["2","code"],["4","code"],["8","code"],["10","code"],["14","code"],["16","code"],["18","code"],["24","code"],["25","code"],["26","code"],["27","code"],["28","code"],["29","code"],["88","code"],["89","code"],["90","doc"],["91","doc"],["92","doc"],["93","doc"],["94","doc"],["95","doc"],["96","doc"],["97","doc"],["98","doc"],["99","doc"],["100","doc"],["101","doc"],["102","doc"],["103","doc"],["104","doc"],["105","doc"],["109","code"],["110","code"],["121","doc"]]}},
-"windows":["0","2","4","8","10","14","16","18","24","25","26","27","28","29","88","89","90","91","92","93","94","95","96","97","98","99","100","101","102","103","104","105","109","110","121"],
+"values":[["0","code"],["2","code"],["4","code"],["8","code"],["10","code"],["14","code"],["16","code"],["18","code"],["24","code"],["25","code"],["26","code"],["27","code"],["28","code"],["29","code"],["88","code"],["89","code"],["90","doc"],["91","doc"],["92","doc"],["93","doc"],["94","doc"],["95","doc"],["96","doc"],["97","doc"],["98","doc"],["99","doc"],["100","doc"],["101","doc"],["102","doc"],["103","doc"],["104","doc"],["105","doc"],["109","code"],["110","code"],["121","doc"],["139","code"]]}},
+"windows":["0","2","4","8","10","14","16","18","24","25","26","27","28","29","88","89","90","91","92","93","94","95","96","97","98","99","100","101","102","103","104","105","109","110","121","139"],
 "zIndex":{"map":{"__map":true,
-"values":[["0",114],["2",120],["4",124],["8",108],["10",122],["14",137],["16",126],["18",130],["24",105],["25",133],["26",115],["27",103],["28",113],["29",123],["88",121],["89",135],["90",134],["91",102],["92",112],["93",125],["94",118],["95",127],["96",106],["97",128],["98",129],["99",131],["100",100],["101",132],["102",109],["103",107],["104",139],["105",136],["109",140],["110",141],["121",111]]}}}
+"values":[["0",114],["2",120],["4",124],["8",108],["10",122],["14",137],["16",126],["18",130],["24",105],["25",133],["26",115],["27",103],["28",113],["29",123],["88",121],["89",135],["90",134],["91",102],["92",112],["93",125],["94",118],["95",127],["96",106],["97",128],["98",129],["99",131],["100",100],["101",132],["102",109],["103",107],["104",139],["105",136],["109",140],["110",141],["121",111],["139",142]]}}}
 {__codeMap: true, value: [[`0`, `const viewExit = Events.receiver({queued: true});
 const viewJoin = Events.receiver({queued: true});
 
@@ -1081,6 +1088,20 @@ html, body {
   white-space: pre-wrap;
   overflow: scroll;
 }
+
+.strudel-editor-container {
+  position: fixed;
+  right: 0px;
+  height: calc(100% - 36px);
+  width: 100%;
+  border: 1px solid black;
+  padding: 0px;
+  min-width: 0px;
+  background-color: black;
+  white-space: pre-wrap;
+  overflow: scroll;
+}
+
 \`;
 
 ((css, renkon) => {
@@ -1298,14 +1319,14 @@ const newEditor = (id, docModel) => {
     "name": "abc",
     "debug": ["reflector"],
     "password": "abc",
-    "tps": 2,
+    "tps": 20,
     "eventRateLimit": 60
     },
     "realm": {"model": [
       "windows", "windowTypes", "positions", "titles", "windowEnabled",
       "zIndex", "windowContentsModel", "padTitle", "docSeparators", "initialData",
       "newId", "padViews", "newWindowRequest", "padTitle", "viewJoin",
-      "viewExit", "xxx", "loadReceiver", "loadHandler", "loadFromFile", "loadFromProgram", "runRequest", "resetRequest", "strEvents", "avatars"]},
+      "viewExit", "xxx", "loadReceiver", "loadHandler", "loadFromFile", "loadFromProgram", "runRequest", "resetRequest", "strEvents", "avatars", "isPlaying", "clock", "genTime"]},
     "name": "pad"
   },
   methods: {
@@ -1482,7 +1503,7 @@ const windowContents = Behaviors.select(
         if (isLocal) {
           elem = doc;
         } else {
-            elem = newStrudelPane(id, doc)
+            elem = newStrudelPane(id, doc);
         }
       }
       else {
@@ -3333,22 +3354,6 @@ SVG icons are created in 24x24 viewport, and converted to the data string.`],
 [`109`, `const addStrudel = Events.listener(renkon.querySelector("#addStrudelButton"), "click", () => "strudel");
 const me = Renkon.app.viewId;
 const initStrudelWindow = Events.receiver();
-const doAction = Events.receiver();
-const strudelUpdate = Events.receiver();
-
-const doPlay = ((strEvents) => {
-  for (const [id, contents] of windowContents.map) {
-    if (id == strEvents.id) {
-      console.log(strEvents);
-      strEvents.action == "play" ? contents.repl.evaluate() : contents.repl.stop();
-    }
-  }
-})(strEvents);
-
-const strEvents = Behaviors.select(
-  [],
-  doAction, (prev, action) => action
-);
 
 const avatars = Behaviors.collect([], viewJoin, (prev, newOne) => [...prev, newOne]);
 console.log(avatars);
@@ -3412,7 +3417,7 @@ const newStrudelPane = (id, docModel) => {
   const editorView = id ? new window.StrudelMirror({
   root: container.querySelector(".strudel-editor-container"),
   defaultOutput: window.StrudelLib.webaudio.webaudioOutput,
-  getTime: () => window.StrudelLib.webaudio.getAudioContext().currentTime,  
+  getTime: () => window.StrudelLib.webaudio.getAudioContext().currentTime, //getTime(),  / 1000
   transpiler: window.StrudelLib.transpiler.transpiler,
   initialCode: docModel.editor.state.doc, //'note(\\"c3 eb3 g3\\")',
   editor: docModel,
@@ -3435,6 +3440,7 @@ const newStrudelPane = (id, docModel) => {
   renkon: Renkon
 }) : {};
 
+  console.log(editorView);
   const editor = editorView.editor;
   editor.dom.id = \`\${id}-strudel-editor\`;
   editor.app = editor;
@@ -3483,7 +3489,136 @@ const initialStrudelDoc = ((initStrudelWindow) => {
           Events.send(doAction, {id: \`\${Number.parseInt(evt.target.id)}\`, action: "stop", sender: me});
         },
       },
-'Stop')
+'Stop'),
+      h("button", {
+        id: \`\${id}-syncButton\`,
+        onClick: (evt) => {
+          Events.send(doSync, {id: \`\${Number.parseInt(evt.target.id)}\`, action: "sync", sender: me});
+        },
+      },
+'Sync')
     ])};
-`],
-[`121`, `# Strudel REPL`]]}
+
+const isPlaying = Behaviors.select(
+    { map: new Map() },
+    loadHandler, (_prev, loaded) => {
+        return loaded.isPlaying || { map: new Map() };
+    },
+    newWindowRequest, (prev, request) => {
+        const id = request.id;
+        prev.map.set(id, { id, playing: false, started: Renkon.app.now() });
+        return { map: prev.map };
+    },
+    remove, (prev, remove) => {
+        prev.map.delete(remove.id);
+        return { map: prev.map };
+    },
+    playingChange, (prev, change) => {
+        const id = change.id;
+        const v = { ...prev.map.get(id), ...change };
+        prev.map.set(id, v);
+        return { map: prev.map };
+    }
+);`],
+[`121`, `# Strudel REPL`],
+[`139`, `//Strudel REPL syncing using Croquet inside Renkon-Pad
+
+const playingChange = Events.receiver();
+const doAction = Events.receiver();
+const strudelUpdate = Events.receiver();
+
+const doSync = Events.receiver();
+const inREPL = { in: false };
+const cps = 0.5;
+
+const evaluateREPL = Events.receiver();
+const sharedRepl = Events.receiver();
+const localRepl = Events.receiver();
+const syncData = { delay: 0 };
+
+const sharedEvalDelayed = ((data) => {
+    if (data?.repl) {
+        inREPL.in = true;
+        data.repl.evaluate();
+    }
+})(Events.delay(sharedRepl, syncData.delay));
+
+const calculateDelay = (id) => {
+    const cycleDurationMs = (1 / cps) * 1000;
+    let startedTime = isPlaying.map.get(id)?.started;
+    const elapsedSinceStart = Renkon.app.now() - startedTime;
+    const phase = elapsedSinceStart % cycleDurationMs;
+    const delay = cycleDurationMs - phase;
+    syncData.delay = delay;
+
+}
+
+const localSyncDelayed = ((data) => {
+    if (data?.repl) {
+
+      data.repl.stop();
+      data.repl.evaluate();
+       // data.repl.repl.evaluate('hush');
+        
+    }
+})(Events.delay(localRepl, syncData.delay));
+
+const actionOnSync = ((doSync) => {
+    for (const [id, contents] of windowContents.map) {
+        if (id == doSync.id) {
+            calculateDelay(id);
+            Events.send(localRepl, contents);
+            console.log("SYNC!");
+        }
+    }
+})(doSync);
+
+const doPlay = ((strEvents) => {
+    for (const [id, contents] of windowContents.map) {
+        if (id == strEvents.id) {
+            console.log(strEvents);
+            calculateDelay(id);
+
+            const isPlay = (isPlaying.map.get(id)?.playing !== false);
+            if (strEvents.action == "play") {
+
+                inREPL.in = !isPlay ? true : false;
+                Events.send(sharedRepl, contents);
+
+            } else if (strEvents.action == "stop") {
+                console.log("in stop");
+                //contents.repl.repl.evaluate('hush()');
+                contents.repl.stop();
+                if (isPlay) {
+                    Events.send(sharedRepl, null);
+                }
+            }
+        }
+    }
+})(strEvents);
+
+const strEvents = Behaviors.select(
+    [],
+    doAction, (prev, action) => action
+);
+
+// const metro = Events.receiver();
+// ((clock)=> Events.send(metro, clock))(clock);
+
+// const clock = Events.timer(500);
+// const genTime = Behaviors.collect([], clock,
+//     (prev, next) => next);
+
+//console.log(Renkon.app.viewId, genTime);
+
+// const audioOffset = window.StrudelLib.webaudio.getAudioContext().currentTime - (Renkon.app.now() / 1000) - cps;
+// const timeNow = ((genTime) => Renkon.app.now())(genTime);
+
+// const sendTimeToREPLs = ((timeNow) => {
+//     const repls = [...windowContents.map]
+//         .filter(([id, obj]) => obj.repl !== false);
+//     for (const [id, content] of repls) {
+//         const targetTime = audioOffset + timeNow / 1000;
+//         content.repl?.setTimeNow(targetTime);
+//     }
+// })(timeNow);`]]}
