@@ -1,4 +1,5 @@
 //import { isAutoCompletionEnabled } from './autocomplete.mjs';
+import { repl } from '../RenkonCyclist/repl.js';
 import { basicSetup } from './basicSetup.js';
 import { flash, isFlashEnabled } from './flash.js';
 import { highlightMiniLocations, isPatternHighlightingEnabled, updateMiniLocations } from './highlight.js';
@@ -133,7 +134,7 @@ export class StrudelMirror {
 
     this.prebaked = prebake(); //async () => { }; //prebake();
     autodraw && this.drawFirstFrame();
-    this.repl = window.StrudelLib.core.repl({
+    this.repl = repl({ //window.StrudelLib.core.repl({
       ...replOptions,
       //getTime: () => this.getTimeNow(),
       id,

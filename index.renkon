@@ -128,23 +128,23 @@
 "id":"105",
 "width":800,
 "x":8284.815013324254,
-"y":163.09341064898467}],["109",{"height":2540.6525995202696,
+"y":163.09341064898467}],["109",{"height":2249.0626471116866,
 "id":"109",
-"width":929.3536467363563,
-"x":11907.795077604695,
-"y":168.96121446345254}],["110",{"height":1224.8801377116517,
+"width":922.8759924467115,
+"x":11914.27273189434,
+"y":168.96121446345254}],["110",{"height":1137.2168582635754,
 "id":"110",
-"width":818.4594102592816,
-"x":12870.299208840752,
-"y":164.619313510571}],["121",{"height":400,
+"width":818.9587494119575,
+"x":12868.367296329667,
+"y":174.20317479763935}],["121",{"height":400,
 "id":"121",
 "width":800,
 "x":11064.390293610266,
-"y":165.01039156533295}],["139",{"height":2348.705985469691,
-"id":"139",
-"width":754.7594904611268,
-"x":13725.334618311646,
-"y":165.44366348399268}]]}},
+"y":165.01039156533295}],["140",{"height":2820.3408703226573,
+"id":"140",
+"width":992.2917484120682,
+"x":13733.731220374937,
+"y":178.35585139030002}]]}},
 "titles":{"map":{"__map":true,
 "values":[["0",{"id":"0",
 "state":false,
@@ -216,9 +216,9 @@
 "state":false,
 "title":"Strudel Toolbar"}],["121",{"id":"121",
 "state":false,
-"title":"untitled"}],["139",{"id":"139",
+"title":"untitled"}],["140",{"id":"140",
 "state":false,
-"title":"Strudel REPL Sync"}]]}},
+"title":"Shared ClockWorker"}]]}},
 "version":3,
 "windowEnabled":{"map":{"__map":true,
 "values":[["0",{"enabled":true,
@@ -256,13 +256,13 @@
 "id":"105"}],["109",{"enabled":true,
 "id":"109"}],["110",{"enabled":true,
 "id":"110"}],["121",{"enabled":true,
-"id":"121"}],["139",{"enabled":true,
-"id":"139"}]]}},
+"id":"121"}],["140",{"enabled":true,
+"id":"140"}]]}},
 "windowTypes":{"map":{"__map":true,
-"values":[["0","code"],["2","code"],["4","code"],["8","code"],["10","code"],["14","code"],["16","code"],["18","code"],["24","code"],["25","code"],["26","code"],["27","code"],["28","code"],["29","code"],["88","code"],["89","code"],["90","doc"],["91","doc"],["92","doc"],["93","doc"],["94","doc"],["95","doc"],["96","doc"],["97","doc"],["98","doc"],["99","doc"],["100","doc"],["101","doc"],["102","doc"],["103","doc"],["104","doc"],["105","doc"],["109","code"],["110","code"],["121","doc"],["139","code"]]}},
-"windows":["0","2","4","8","10","14","16","18","24","25","26","27","28","29","88","89","90","91","92","93","94","95","96","97","98","99","100","101","102","103","104","105","109","110","121","139"],
+"values":[["0","code"],["2","code"],["4","code"],["8","code"],["10","code"],["14","code"],["16","code"],["18","code"],["24","code"],["25","code"],["26","code"],["27","code"],["28","code"],["29","code"],["88","code"],["89","code"],["90","doc"],["91","doc"],["92","doc"],["93","doc"],["94","doc"],["95","doc"],["96","doc"],["97","doc"],["98","doc"],["99","doc"],["100","doc"],["101","doc"],["102","doc"],["103","doc"],["104","doc"],["105","doc"],["109","code"],["110","code"],["121","doc"],["140","code"]]}},
+"windows":["0","2","4","8","10","14","16","18","24","25","26","27","28","29","88","89","90","91","92","93","94","95","96","97","98","99","100","101","102","103","104","105","109","110","121","140"],
 "zIndex":{"map":{"__map":true,
-"values":[["0",114],["2",120],["4",124],["8",108],["10",122],["14",137],["16",126],["18",130],["24",105],["25",133],["26",115],["27",103],["28",113],["29",123],["88",121],["89",135],["90",134],["91",102],["92",112],["93",125],["94",118],["95",127],["96",106],["97",128],["98",129],["99",131],["100",100],["101",132],["102",109],["103",107],["104",139],["105",136],["109",140],["110",141],["121",111],["139",142]]}}}
+"values":[["0",114],["2",120],["4",124],["8",108],["10",122],["14",137],["16",126],["18",130],["24",105],["25",133],["26",115],["27",103],["28",113],["29",123],["88",121],["89",135],["90",134],["91",102],["92",112],["93",125],["94",118],["95",127],["96",106],["97",128],["98",129],["99",131],["100",100],["101",132],["102",109],["103",107],["104",139],["105",136],["109",140],["110",141],["121",111],["140",142]]}}}
 {__codeMap: true, value: [[`0`, `const viewExit = Events.receiver({queued: true});
 const viewJoin = Events.receiver({queued: true});
 
@@ -1326,7 +1326,7 @@ const newEditor = (id, docModel) => {
       "windows", "windowTypes", "positions", "titles", "windowEnabled",
       "zIndex", "windowContentsModel", "padTitle", "docSeparators", "initialData",
       "newId", "padViews", "newWindowRequest", "padTitle", "viewJoin",
-      "viewExit", "xxx", "loadReceiver", "loadHandler", "loadFromFile", "loadFromProgram", "runRequest", "resetRequest", "strEvents", "avatars", "isPlaying", "clock", "genTime"]},
+      "viewExit", "xxx", "loadReceiver", "loadHandler", "loadFromFile", "loadFromProgram", "runRequest", "resetRequest", "strEvents", "avatars", "isPlaying", "clock", "genTime", "clockworker", "clockworkerChange", "startClock", "stopClock", "processOnTick", "processOnStart", "startClockFromUI", "stopClockFromUI", "onTickInterval", "loopTick" ]},
     "name": "pad"
   },
   methods: {
@@ -3471,7 +3471,38 @@ const initialStrudelDoc = ((initStrudelWindow) => {
   toolbar ? render(windowStrudelDOM(id), toolbar) : {};
   }
 })(initStrudelWindow);`],
-[`110`, `const windowStrudelDOM = (id) => {
+[`110`, `const playingChange = Events.receiver();
+const doAction = Events.receiver();
+const strudelUpdate = Events.receiver();
+
+const inREPL = { in: false };
+const cps = 0.5;
+
+const doPlay = ((strEvents) => {
+    for (const [id, contents] of windowContents.map) {
+        if (id == strEvents.id) {
+            console.log(strEvents);
+            const isPlay = (isPlaying.map.get(id)?.playing !== false);
+            if (strEvents.action == "play") {
+                inREPL.in = !isPlay ? true : false;
+                Events.send(startClockWorker, {id: id,  sender: me});
+                contents.repl.evaluate();
+            } else if (strEvents.action == "stop") {
+                console.log("in stop");
+                Events.send(stopClockWorker, {id: id,  sender: me});
+                contents.repl.stop();
+            }
+        }
+    }
+})(strEvents);
+
+const strEvents = Behaviors.select(
+    [],
+    doAction, (prev, action) => action
+);
+
+
+const windowStrudelDOM = (id) => {
   return h("div", {
     key: \`\${id}\`,
     id: \`\${id}-toolbar\`,
@@ -3489,14 +3520,21 @@ const initialStrudelDoc = ((initStrudelWindow) => {
           Events.send(doAction, {id: \`\${Number.parseInt(evt.target.id)}\`, action: "stop", sender: me});
         },
       },
-'Stop'),
-      h("button", {
-        id: \`\${id}-syncButton\`,
-        onClick: (evt) => {
-          Events.send(doSync, {id: \`\${Number.parseInt(evt.target.id)}\`, action: "sync", sender: me});
-        },
-      },
-'Sync')
+'Stop')
+//       h("button", {
+//         id: \`\${id}-syncButton\`,
+//         onClick: (evt) => {
+//           Events.send(doSync, {id: \`\${Number.parseInt(evt.target.id)}\`, action: "sync", sender: me});
+//         },
+//       },
+// 'Sync'),
+//     h("button", {
+//         id: \`\${id}-startClockButton\`,
+//         onClick: (evt) => {
+//           Events.send(startClockWorker, {id: \`\${Number.parseInt(evt.target.id)}\`,  sender: me});
+//         },
+//       },
+// 'Start Clock')
     ])};
 
 const isPlaying = Behaviors.select(
@@ -3521,85 +3559,155 @@ const isPlaying = Behaviors.select(
     }
 );`],
 [`121`, `# Strudel REPL`],
-[`139`, `//Strudel REPL syncing using Croquet inside Renkon-Pad
+[`140`, `//Strudel REPL syncing using Croquet inside Renkon-Pad: ClockWorker & RenkonCyclist
 
-const playingChange = Events.receiver();
-const doAction = Events.receiver();
-const strudelUpdate = Events.receiver();
+const clockworkerChange = Events.receiver();
+const startClock = Events.receiver();
+const stopClock = Events.receiver();
+const loopTick = Events.receiver();
+const startClockWorker = Events.receiver();
+const stopClockWorker = Events.receiver();
 
-const doSync = Events.receiver();
-const inREPL = { in: false };
-const cps = 0.5;
+const onTickInterval = Events.timer(50);
 
-const evaluateREPL = Events.receiver();
-const sharedRepl = Events.receiver();
-const localRepl = Events.receiver();
-const syncData = { delay: 0 };
+const startClockFromUI = ((startClockWorker) => {
+  const clockData = clockworker.map.get(startClockWorker.id);
+  console.log("Clock: ", clockData);
+  Events.send(startClock, clockData);
+})(startClockWorker);
 
-const sharedEvalDelayed = ((data) => {
-    if (data?.repl) {
-        inREPL.in = true;
-        data.repl.evaluate();
+const stopClockFromUI = ((stopClockWorker) => {
+  const clockData = clockworker.map.get(stopClockWorker.id);
+  console.log("Clock: ", clockData);
+  Events.send(stopClock, clockData);
+})(stopClockWorker);
+
+const processOnTick = ((clockworker) => {
+  const t = onTickInterval * 0.001;
+  Events.send(loopTick, { time: t });
+})(clockworker);
+
+const schedulerUpdate = ((clockworker) => {
+  const clocks = [...clockworker.map]
+    .filter(([id, obj]) => obj.started !== false);
+  for (const [id, content] of clocks) {
+    console.log("Strudel tick: ", content.replTick);
+    let window = windowContents.map.get(id);
+    if (window?.repl) {
+      window.repl.repl.scheduler.setTick(content.replTick);
     }
-})(Events.delay(sharedRepl, syncData.delay));
+  }
+})(clockworker);
 
-const calculateDelay = (id) => {
-    const cycleDurationMs = (1 / cps) * 1000;
-    let startedTime = isPlaying.map.get(id)?.started;
-    const elapsedSinceStart = Renkon.app.now() - startedTime;
-    const phase = elapsedSinceStart % cycleDurationMs;
-    const delay = cycleDurationMs - phase;
-    syncData.delay = delay;
 
-}
+const clockworker = Behaviors.select(
+  { map: new Map() },
+  loadHandler, (_prev, loaded) => {
+    return loaded.clockworker || { map: new Map() };
+  },
+  newWindowRequest, (prev, request) => {
+    const id = request.id;
+    prev.map.set(id, {
+      id,
+      num_cycles_at_cps_change: 0,
+      num_ticks_since_cps_change: 0,
+      num_seconds_at_cps_change: 0,
+      cps: 0.5,
+      duration: 0.05,
+      started: false,
+      interval: 0.05,
+      overlap: 0.1,
+      tick: 0,
+      phase: 0,
+      precision: 10 ** 4,
+      minLatency: 0.05,
+      replTick: {}
+    });
+    return { map: prev.map };
+  },
+  remove, (prev, remove) => {
+    prev.map.delete(remove.id);
+    return { map: prev.map };
+  },
+  clockworkerChange, (prev, change) => {
+    const id = change.id;
+    const v = { ...prev.map.get(id), ...change };
+    prev.map.set(id, v);
+    return { map: prev.map };
+  },
+  loopTick, (prev, change) => {
 
-const localSyncDelayed = ((data) => {
-    if (data?.repl) {
+    const time = change.time;
 
-      data.repl.stop();
-      data.repl.evaluate();
-       // data.repl.repl.evaluate('hush');
-        
-    }
-})(Events.delay(localRepl, syncData.delay));
+    const sendTickToREPL = (clockState, phase, duration, tick, time) => {
+      const num_seconds_since_cps_change = clockState.num_ticks_since_cps_change * duration;
+      const tickdeadline = phase - time;
+      const lastTick = time + tickdeadline;
+      const num_cycles_since_cps_change = num_seconds_since_cps_change * clockState.cps;
+      const begin = clockState.num_cycles_at_cps_change + num_cycles_since_cps_change;
+      const secondsSinceLastTick = time - lastTick - duration;
+      const eventLength = duration * clockState.cps;
+      const end = begin + eventLength;
+      const cycle = begin + secondsSinceLastTick * clockState.cps;
 
-const actionOnSync = ((doSync) => {
-    for (const [id, contents] of windowContents.map) {
-        if (id == doSync.id) {
-            calculateDelay(id);
-            Events.send(localRepl, contents);
-            console.log("SYNC!");
+      clockState.replTick = {
+        begin,
+        end,
+        cps,
+        time,
+        cycle,
+      };
+      clockState.num_ticks_since_cps_change++;
+    };
+
+    for (const [id, data] of prev.map) {
+      if (data.started) {
+
+        let phase = data.phase;
+        let tick = data.tick;
+        const lookahead = time + data.interval + data.overlap; // the time window for this tick
+        if (phase === 0) {
+          phase = time + data.minLatency;
         }
-    }
-})(doSync);
 
-const doPlay = ((strEvents) => {
-    for (const [id, contents] of windowContents.map) {
-        if (id == strEvents.id) {
-            console.log(strEvents);
-            calculateDelay(id);
+        //console.log("onTick: ", id, data, time);
 
-            const isPlay = (isPlaying.map.get(id)?.playing !== false);
-            if (strEvents.action == "play") {
+        while (phase < lookahead) {
 
-                inREPL.in = !isPlay ? true : false;
-                Events.send(sharedRepl, contents);
-
-            } else if (strEvents.action == "stop") {
-                console.log("in stop");
-                //contents.repl.repl.evaluate('hush()');
-                contents.repl.stop();
-                if (isPlay) {
-                    Events.send(sharedRepl, null);
-                }
-            }
+          phase = Math.round(phase * data.precision) / data.precision;
+          phase >= time && sendTickToREPL(data, phase, data.duration, tick, time); //callback(phase, duration, tick, t);
+          phase < time && console.log('TOO LATE', id, phase); // what if latency is added from outside?
+          phase += data.duration; // increment phase by duration
+          tick++;
+          prev.map.set(id, { ...data, ...{ phase: phase, tick: tick } });
         }
+      }
+    };
+    return { map: prev.map };
+  },
+  stopClock, (prev, change) => {
+    const id = change.id;
+    const p = {
+      started: false,
+      num_ticks_since_cps_change: 0,
+      num_cycles_at_cps_change: 0,
+      tick: 0,
+      phase: 0
     }
-})(strEvents);
-
-const strEvents = Behaviors.select(
-    [],
-    doAction, (prev, action) => action
+    const v = { ...prev.map.get(id), ...p };
+    prev.map.set(id, v);
+    return { map: prev.map };
+  },
+  startClock, (prev, change) => {
+    const id = change.id;
+    const interval = change.interval;
+    const p = {
+      started: true
+    }
+    const v = { ...prev.map.get(id), ...p };
+    prev.map.set(id, v);
+    return { map: prev.map };
+  }
 );
 
 // const metro = Events.receiver();
