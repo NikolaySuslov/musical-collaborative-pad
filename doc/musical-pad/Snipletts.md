@@ -2,7 +2,7 @@
 
 ---
 ```
-sound("bd hh sd oh")
+sound("<bd hh sd oh>*8").bank("RolandTR808")
 ```
 ---
 ```
